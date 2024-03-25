@@ -1,0 +1,113 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* landingpage style */
+.custom-shape-divider-bottom-1711115110 {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  background-color: #73B3BD;
+  z-index: -100;
+}
+
+.custom-shape-divider-bottom-1711115110 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 800px);
+  height: 90vh;
+}
+
+.custom-shape-divider-bottom-1711115110 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.divwords{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  align-items: center !important;
+  height: 90vh;
+  
+}
+
+.innerdivwords2{
+  width: 50%;
+  height: 80vh;
+  align-items: center !important;
+  display: flex;
+}
+
+.justifywordsdiv{
+  /* border: 2px solid; */
+  width: 75%;
+  text-align: justify;
+}
+
+.innerdivwords1{
+  box-shadow: white 0px 5px 5px 5px;
+  width: 48%;
+  height: 80vh;
+  background-image: url(../src/assets/1000306_OIHDNM0.jpg);
+  background-position: center;
+  background-size: contain;
+  border-bottom-right-radius: 330px !important;
+  border-bottom-left-radius: 65px !important;
+  border-radius: 20px;
+}
+
+.Welcomespancolour{
+  color: white;
+}
+
+.navbar-brand{
+  box-shadow: white 0px 2px 2px 2px;
+  border: 1px solid;
+  width: 80px;
+  height: 70px;
+  border-radius: 10px;
+  background-image: url(../src/assets/126143.jpg);
+  background-size: contain;
+  background-position: center;
+}
+
+/* responsive landingpage */
+@media (max-width:688px) {
+  .divwords{
+    display: block;   
+    padding: 5px;
+    height: 100vh !important;
+  }
+
+  .innerdivwords2{
+    width: 100%;
+    height: 45vh;
+    display: flex;
+  }
+
+  .innerdivwords1{
+    width: 100%;
+    height: 60vh;
+   
+    border-bottom-right-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+
+  .Welcomespancolour{
+    color: black;
+  }
+
+  .justifywordsdiv{
+    /* border: 2px solid; */
+    width: 100%;
+    text-align: justify;
+  }
+  .welcomedivstyle{
+    text-align: center;
+  }
+}
