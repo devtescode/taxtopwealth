@@ -106,8 +106,8 @@
   flex-direction: column;
   gap: 35px;
   background: #e3e3e3;
-  box-shadow: 16px 16px 32px #c8c8c8,
-        -16px -16px 32px #fefefe;
+  box-shadow: 5px 5px 22px #c8c8c8,
+        -5px -5px 22px #fefefe;
   border-radius: 8px;
   margin: auto;
 }
@@ -220,5 +220,20 @@
   }
   .welcomedivstyle{
     text-align: center;
+  }
+  .card {
+    /* border: 2px solid; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center !important;
+    /* min-height: 350px; */
+    width: 100%;
+    flex-direction: column;
+    gap: 35px;
+    background: #e3e3e3;
+    box-shadow: 16px 16px 32px #c8c8c8,
+          -16px -16px 32px #fefefe;
+    border-radius: 8px;
+    margin: auto;
   }
 }
