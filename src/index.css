@@ -74,6 +74,117 @@
   background-position: center;
 }
 
+
+/* Signup page */
+
+.containersignup{
+  /* border: 2px solid; */
+  align-items: center !important;
+  display: flex !important;
+  background-color: #73B3BD;
+  width: 100% !important;
+  height: 100vh;
+}
+
+
+.login {
+  color: #73B3BD;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.card {
+  /* border: 2px solid; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center !important;
+  /* min-height: 350px; */
+  width: 50%;
+  flex-direction: column;
+  gap: 35px;
+  background: #e3e3e3;
+  box-shadow: 16px 16px 32px #c8c8c8,
+        -16px -16px 32px #fefefe;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.inputBox {
+  position: relative;
+  width: 90%;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #73B3BD;
+  font-size: 1em;
+  background: transparent;
+  border-left: 100% solid #73B3BD;
+  border-bottom: 3px solid #73B3BD;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #73B3BD;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #73B3BD;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid #73B3BD;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #73B3BD;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+
+.enter:hover {
+  /* background-color: rgb(0, 0, 0); */
+  background-color: #73B3BD;
+  color: white;
+}
+
+
 /* responsive landingpage */
 @media (max-width:688px) {
   .divwords{
