@@ -5,7 +5,11 @@ import axios from 'axios'
 const Signup = () => {
     const formik = useFormik({
         initialValues: {
-            username: ""
+            username: "",
+            email: "",
+            phonenumber: "",
+            refeeral: "",
+            password: "",
         },
         validationSchema: Yup.object({
             username: Yup.string()
@@ -46,17 +50,17 @@ const Signup = () => {
                     <input
                             type="text"
                             required="required"
-                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
-                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                            className={`form-control ${(formik.values.email && !formik.errors.email) ||
+                                (formik.touched.email && formik.values.email && formik.errors.email && formik.touched.email && formik.values.email)
                                 ? 'is-valid'
-                                : formik.values.username || formik.touched.username
+                                : formik.values.email || formik.touched.email
                                     ? 'is-invalid'
                                     : ''
                                 }`}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
-                            name="username"
-                            value={formik.values.username}
+                            name="email"
+                            value={formik.values.email}
                         />
                         <span>Email</span>
                     </div>
@@ -65,17 +69,17 @@ const Signup = () => {
                     <input
                             type="text"
                             required="required"
-                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
-                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                            className={`form-control ${(formik.values.phonenumber && !formik.errors.phonenumber) ||
+                                (formik.touched.phonenumber && formik.values.phonenumber && formik.errors.phonenumber && formik.touched.phonenumber && formik.values.phonenumber)
                                 ? 'is-valid'
-                                : formik.values.username || formik.touched.username
+                                : formik.values.phonenumber || formik.touched.phonenumber
                                     ? 'is-invalid'
                                     : ''
                                 }`}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
-                            name="username"
-                            value={formik.values.username}
+                            name="phonenumber"
+                            value={formik.values.phonenumber}
                         />
                         <span>Phone Number</span>
                     </div>
@@ -84,17 +88,17 @@ const Signup = () => {
                     <input
                             type="text"
                             required="required"
-                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
-                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                            className={`form-control ${(formik.values.refeeral && !formik.errors.refeeral) ||
+                                (formik.touched.refeeral && formik.values.refeeral && formik.errors.refeeral && formik.touched.refeeral && formik.values.refeeral)
                                 ? 'is-valid'
-                                : formik.values.username || formik.touched.username
+                                : formik.values.refeeral || formik.touched.refeeral
                                     ? 'is-invalid'
                                     : ''
                                 }`}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
-                            name="username"
-                            value={formik.values.username}
+                            name="refeeral"
+                            value={formik.values.refeeral}
                         />
                         <span>Refeeral</span>
                     </div>
@@ -104,17 +108,17 @@ const Signup = () => {
                     <input
                             type="text"
                             required="required"
-                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
-                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                            className={`form-control ${(formik.values.password && !formik.errors.password) ||
+                                (formik.touched.password && formik.values.password && formik.errors.password && formik.touched.password && formik.values.password)
                                 ? 'is-valid'
-                                : formik.values.username || formik.touched.username
+                                : formik.values.password || formik.touched.password
                                     ? 'is-invalid'
                                     : ''
                                 }`}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
-                            name="username"
-                            value={formik.values.username}
+                            name="password"
+                            value={formik.values.password}
                         />
                         <span>Password</span>
                     </div>
