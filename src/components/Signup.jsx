@@ -13,7 +13,12 @@ const Signup = () => {
 
                     <div class="inputBox">
                         <input type="password" required="required"/>
-                            <span>Password</span>
+                            <span>Email</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="password" required="required"/>
+                            <span>Phone Number</span>
                     </div>
                     
                     <div class="inputBox">
@@ -21,13 +26,12 @@ const Signup = () => {
                             <span>Refeeral</span>
                     </div>
 
+                   
                     <div class="inputBox">
                         <input type="password" required="required"/>
-                            <span>Email</span>
+                            <span>Password</span>
                     </div>
-
                     <button class="enter">Sign Up</button>
-
                 </div>
             </div>
         </>
