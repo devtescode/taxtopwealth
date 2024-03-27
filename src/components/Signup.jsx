@@ -38,29 +38,84 @@ const Signup = () => {
                             onBlur={formik.handleBlur}
                             name="username"
                             value={formik.values.username}
-                            placeholder="Username"
                         />
                         <span class="user">Username</span>
                     </div>
 
                     <div class="inputBox">
-                        <input type="text" required="required" />
+                    <input
+                            type="text"
+                            required="required"
+                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
+                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                                ? 'is-valid'
+                                : formik.values.username || formik.touched.username
+                                    ? 'is-invalid'
+                                    : ''
+                                }`}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            name="username"
+                            value={formik.values.username}
+                        />
                         <span>Email</span>
                     </div>
 
                     <div class="inputBox">
-                        <input type="number" required="required" />
+                    <input
+                            type="text"
+                            required="required"
+                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
+                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                                ? 'is-valid'
+                                : formik.values.username || formik.touched.username
+                                    ? 'is-invalid'
+                                    : ''
+                                }`}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            name="username"
+                            value={formik.values.username}
+                        />
                         <span>Phone Number</span>
                     </div>
 
                     <div class="inputBox">
-                        <input type="text" required="required" />
+                    <input
+                            type="text"
+                            required="required"
+                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
+                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                                ? 'is-valid'
+                                : formik.values.username || formik.touched.username
+                                    ? 'is-invalid'
+                                    : ''
+                                }`}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            name="username"
+                            value={formik.values.username}
+                        />
                         <span>Refeeral</span>
                     </div>
 
 
                     <div class="inputBox">
-                        <input type="password" required="required" />
+                    <input
+                            type="text"
+                            required="required"
+                            className={`form-control ${(formik.values.username && !formik.errors.username) ||
+                                (formik.touched.username && formik.values.username && formik.errors.username && formik.touched.username && formik.values.username)
+                                ? 'is-valid'
+                                : formik.values.username || formik.touched.username
+                                    ? 'is-invalid'
+                                    : ''
+                                }`}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            name="username"
+                            value={formik.values.username}
+                        />
                         <span>Password</span>
                     </div>
                     <button class="enter">Sign Up</button>
