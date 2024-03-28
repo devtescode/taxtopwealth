@@ -56,7 +56,7 @@ const Signup = () => {
                 Swal.fire({
                     icon: "error",
                     title: "<h3>Error Occured</h3>",
-                    text: errorMessage
+                    text: errmessage
                 });
             })
         }
