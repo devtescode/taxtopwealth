@@ -4,6 +4,7 @@ import './App.css'
 import Landingpage from './components/Landingpage'
 import Notfoundpage from './components/Notfoundpage'
 import Signup from './components/Signup'
+import Signin from './components/Signin'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Landingpage/>}/>
       <Route path='su' element={<Signup/>}/>
+      <Route path='si' element={<Signin/>}/>
       <Route path='*' element={<Notfoundpage/>}/>
     </Routes>
     </>

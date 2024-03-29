@@ -3,24 +3,15 @@ import { useFormik } from 'formik'
 import * as Yup from "yup"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-const Signup = () => {
-    const navigate = useNavigate()
+const Signin = () => {
     const formik = useFormik({
         initialValues: {
             username: "",
-            email: "",
-            phonenumber: "",
-            refeeral: "",
             password: "",
         },
         validationSchema: Yup.object({
             username: Yup.string()
                 .required('Required'),
-            email: Yup.string().email('Invalid email address')
-                .required('Required'),
-            phonenumber: Yup.number().typeError('Must be a number')
-                .required('Required'),
-            referral: Yup.string(),
             password: Yup.string()
                 .required('Required'),
 
@@ -28,9 +19,9 @@ const Signup = () => {
         onSubmit: values => {
             let successMessage, errorMessage;
             let allDetails = {
-                Username: values.username, Email: values.email, Phonenumber: values.phonenumber, Refeeral: values.refeeral, Password: values.password
+                Username: values.username, Password: values.password
             }
-            axios.post("http://localhost:3600/facebook/Signup", allDetails)
+            axios.post("http://localhost:3600/facebook/Signin", allDetails)
             .then((response) => {
                 const errorMessage = response.data.message;
                 const sucessMessage = response.data.message;
@@ -70,7 +61,7 @@ const Signup = () => {
 
                 <div class="containersignup">
                     <div class="card">
-                        <a class="login">Register</a>
+                        <a class="login">Login</a>
                         <div class="inputBox">
                             <input
                                 type="text"
@@ -94,64 +85,6 @@ const Signup = () => {
                             <input
                                 type="text"
                                 required="required"
-                                className={`form-control ${(formik.values.email && !formik.errors.email) ||
-                                    (formik.touched.email && formik.values.email && formik.errors.email && formik.touched.email && formik.values.email)
-                                    ? 'is-valid'
-                                    : formik.values.email || formik.touched.email
-                                        ? 'is-invalid'
-                                        : ''
-                                    }`}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                name="email"
-                                value={formik.values.email}
-                            />
-                            <span>Email</span>
-                        </div>
-
-                        <div class="inputBox">
-                            <input
-                                type="text"
-                                required="required"
-                                className={`form-control ${(formik.values.phonenumber && !formik.errors.phonenumber) ||
-                                    (formik.touched.phonenumber && formik.values.phonenumber && formik.errors.phonenumber && formik.touched.phonenumber && formik.values.phonenumber)
-                                    ? 'is-valid'
-                                    : formik.values.phonenumber || formik.touched.phonenumber
-                                        ? 'is-invalid'
-                                        : ''
-                                    }`}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                name="phonenumber"
-                                value={formik.values.phonenumber}
-                            />
-                            <span>Phone Number</span>
-                        </div>
-
-                        <div class="inputBox">
-                            <input
-                                type="text"
-                                required="required"
-                                className={`form-control ${(formik.values.refeeral && !formik.errors.refeeral) ||
-                                    (formik.touched.refeeral && formik.values.refeeral && formik.errors.refeeral && formik.touched.refeeral && formik.values.refeeral)
-                                    ? 'is-valid'
-                                    : formik.values.refeeral || formik.touched.refeeral
-                                        ? 'is-invalid'
-                                        : ''
-                                    }`}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                name="refeeral"
-                                value={formik.values.refeeral}
-                            />
-                            <span>Refeeral</span>
-                        </div>
-
-
-                        <div class="inputBox">
-                            <input
-                                type="text"
-                                required="required"
                                 className={`form-control ${(formik.values.password && !formik.errors.password) ||
                                     (formik.touched.password && formik.values.password && formik.errors.password && formik.touched.password && formik.values.password)
                                     ? 'is-valid'
@@ -166,7 +99,7 @@ const Signup = () => {
                             />
                             <span>Password</span>
                         </div>
-                        <button class="enter" type='submit'>Sign Up</button>
+                        <button class="enter" type='submit'>Sign In</button>
                     </div>
                 </div>
             </form>
@@ -174,4 +107,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Signin
