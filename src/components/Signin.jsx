@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useFormik } from 'formik'
 import * as Yup from "yup"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Loader from './Loaders/Loaderani'
 const Signin = () => {
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(false);
     const formik = useFormik({
         initialValues: {
             username: "",
@@ -18,48 +20,55 @@ const Signin = () => {
 
         }),
         onSubmit: values => {
-            let successMessage, errorMessage;
+            setLoading(true);
+            // let successMessage, errorMessage;
             let allDetails = {
                 Username: values.username, Password: values.password
             }
             axios.post("http://localhost:3600/facebook/Signin", allDetails)
-            .then((response) => {
-                const errorMessage = response.data.message;
-                const sucessMessage = response.data.message;
-            
-                if (!response.data.status) {
+                .then((response) => {
+                    const errorMessage = response.data.message;
+                    const sucessMessage = response.data.message;
+
+                    if (!response.data.status) {
+                            setLoading(false);
+                            Swal.fire({
+                                icon: "error",
+                                title: "<h3>Registration Failed</h3>",
+                                text: errorMessage
+                            });
+                    } else {
+                   
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "<h3>Success</h3>",
+                            text: sucessMessage,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+
+                        navigate("/fb")
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                    const errmessage = err.response.data.message
                     Swal.fire({
                         icon: "error",
-                        title: "<h3>Registration Failed</h3>",
-                        text: errorMessage
+                        title: "<h3>Error Occured</h3>",
+                        text: errmessage
                     });
-                } else {
-                    Swal.fire({
-                        position: "center",
-                        icon: "success",
-                        title: "<h3>Success</h3>",
-                        text: sucessMessage,
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    navigate("/fb")
-                }
-            })
-            .catch((err)=>{
-                console.log(err);
-                const errmessage = err.response.data.message
-                Swal.fire({
-                    icon: "error",
-                    title: "<h3>Error Occured</h3>",
-                    text: errmessage
-                });
-            })
+                })
+                setTimeout(() => {
+                    setLoading(false);
+                }, 120000);
         }
     })
     return (
         <>
+            {loading && <Loader/>}
             <form action="" onSubmit={formik.handleSubmit}>
-
                 <div class="containersignup">
                     <div class="card">
                         <a class="login">Login</a>
