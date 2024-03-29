@@ -4,6 +4,7 @@ import * as Yup from "yup"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 const Signin = () => {
+    const navigate = useNavigate()
     const formik = useFormik({
         initialValues: {
             username: "",
@@ -41,7 +42,7 @@ const Signin = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    navigate("/si")
+                    navigate("/fb")
                 }
             })
             .catch((err)=>{
