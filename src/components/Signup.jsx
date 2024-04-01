@@ -84,8 +84,8 @@ const Signup = () => {
                                     }`}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                name="username"
                                 value={formik.values.username}
+                                name="username"
                             />
                             <span class="user">Username</span>
                         </div>
