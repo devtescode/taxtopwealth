@@ -187,6 +187,54 @@
 }
 
 
+/* facebook page code */
+.fbcontainer{
+  border: 1px solid;
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+}
+
+.innercontainer{
+  /* border: 2px solid; */
+  height: 80vh;
+  width: 40%;
+  margin: auto;
+  align-items: center !important;
+}
+
+.fbstylewords{
+  color: #1E73FF;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+/* input facebookpage styling */
+.styled-input {
+  position: relative;
+  cursor: text;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0 13px;
+  height: 48px;
+  width: 100%;
+  background-color: #F5F6F7;
+  border: 1px solid #F5F6F7;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all 100ms ease-in-out;
+}
+
+.styled-input:focus {
+  /* border-color: black ; */
+  
+}
+
+
+
+
+
+
 /* responsive landingpage */
 @media (max-width:688px) {
   .divwords{

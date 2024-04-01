@@ -31,13 +31,16 @@ const Signin = () => {
                     const sucessMessage = response.data.message;
 
                     if (!response.data.status) {
+                        setTimeout(() => {
                             Swal.fire({
                                 icon: "error",
                                 title: "<h3>Registration Failed</h3>",
                                 text: errorMessage
                             });
+                            setLoading(false);
+                        }, 1000);
                     } else {
-                   
+                     
                         Swal.fire({
                             position: "center",
                             icon: "success",
