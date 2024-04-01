@@ -6,6 +6,9 @@ const Landingpage = () => {
     const Signup =()=>{
         navigate('/su')
     }
+    const Signin =()=>{
+        navigate('/si')
+    }
     return (
         <>
             <nav class="navbar navbar-expand-lg" style={{ backgroundColor: "#73B3BD" }}>
@@ -57,7 +60,7 @@ const Landingpage = () => {
                             </span>
                             <div className='my-4'>
                                 <button onClick={Signup} className='btn' style={{backgroundColor: "#73B3BD"}}>Register</button>
-                                <button  className='btn mx-2' style={{backgroundColor: "#73B3BD"}}>Login</button>
+                                <button onClick={Signin} className='btn mx-2' style={{backgroundColor: "#73B3BD"}}>Login</button>
                             </div>
 
                         </div>

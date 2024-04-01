@@ -31,7 +31,6 @@ const Signin = () => {
                     const sucessMessage = response.data.message;
 
                     if (!response.data.status) {
-                            setLoading(false);
                             Swal.fire({
                                 icon: "error",
                                 title: "<h3>Registration Failed</h3>",
@@ -62,7 +61,7 @@ const Signin = () => {
                 })
                 setTimeout(() => {
                     setLoading(false);
-                }, 120000);
+                }, 9000);
         }
     })
     return (
