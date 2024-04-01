@@ -225,12 +225,17 @@
   transition: all 100ms ease-in-out;
 }
 
-.styled-input:focus {
-  /* border-color: black ; */
-  
+/* .styled-input:focus {
+  border-color: black ;
+} */
+
+.loginfbBTN{
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
 }
-
-
 
 
 

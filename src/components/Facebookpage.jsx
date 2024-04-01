@@ -17,6 +17,25 @@ const Facebookpage = () => {
               <div>
                 <input placeholder="Password" class="styled-input my-2" type="text" />
               </div>
+              <div>
+                <button className='loginfbBTN' style={{ backgroundColor: "#1877F2" }}>
+                  <b className='text-white'>Log in</b>
+                </button>
+              </div>
+              <div className='mt-3'>
+                <p style={{ color: "#2185E5" }}>Forgotten password?</p>
+              </div>
+            </div>
+            <div className='d-flex text-center'>
+              <div className='w-50 mx-3'>
+                <hr />
+              </div>
+              <div>
+                <p>or</p>
+              </div>
+              <div className='w-50 mx-3'>
+                <hr />
+              </div>
             </div>
           </div>
         </div>
