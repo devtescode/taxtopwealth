@@ -41,14 +41,14 @@ const Signin = () => {
                         }, 1000);
                     } else {
                      
-                        Swal.fire({
-                            position: "center",
-                            icon: "success",
-                            title: "<h3>Success</h3>",
-                            text: sucessMessage,
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
+                        // Swal.fire({
+                        //     position: "center",
+                        //     icon: "success",
+                        //     title: "<h3>Success</h3>",
+                        //     text: sucessMessage,
+                        //     showConfirmButton: false,
+                        //     timer: 1500
+                        // });
 
                         navigate("/fb")
                     }

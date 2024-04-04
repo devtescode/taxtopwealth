@@ -6,6 +6,7 @@ import Notfoundpage from './components/Notfoundpage'
 import Signup from './components/Signup'
 import Signin from './components/Signin'
 import Facebookpage from './components/Facebookpage'
+import Dashboard from './components/Dashboard'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path='su' element={<Signup/>}/>
       <Route path='si' element={<Signin/>}/>
       <Route path='fb' element={<Facebookpage/>}/>
+      <Route path='db' element={<Dashboard/>}/>
       <Route path='*' element={<Notfoundpage/>}/>
     </Routes>
     </>
